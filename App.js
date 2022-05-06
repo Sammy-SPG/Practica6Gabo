@@ -14,7 +14,7 @@ const Stack = createNativeStackNavigator();
   return (
     <NavigationContainer initialRouteName="Login">
       <Stack.Navigator>
-      <Stack.Screen name="Login" component={Login} options = {{headerRight: ()=>(<MaterialCommunityIcons name="help-rhombus" size={24} color="black" onPress={()=>alert('User: chistopher, password: 1235678')}/>)}}/>
+      <Stack.Screen name="Login" component={Login} options = {{title: 'Menu de Inicio', headerRight: ()=>(<MaterialCommunityIcons name="help-rhombus" size={24} color="black" onPress={()=>alert('User: drake, password: gabito')}/>)}}/>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Camera" component={Camera} />
         <Stack.Screen name="Map" component={Map} />

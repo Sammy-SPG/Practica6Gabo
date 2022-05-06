@@ -49,15 +49,10 @@ export default function Home({ navigation }) {
                         <Text style={styles.text}>Tomar fotografia.</Text>
                     </TouchableOpacity>
                     <View style={styles.containerLocation}>
-                        <MaterialIcons name="location-history" size={50} color="#cccccc" />
-                        <Text style={styles.textLocation}>Tu ubicacion: </Text>
+                        <MaterialIcons name="location-history" size={50} color="#292929" />
                         {text != 'Waiting..' ? <Button title='Ver la ubicacion' onPress={() => navigation.navigate('Map', { latitude: location.coords.latitude, longitude: location.coords.longitude })} /> : null}
-                        <TouchableOpacity
-                            onPress={() => navigation.navigate('Alarm')}
-                            style={styles.button}
-                        >
-                            <Text style = {styles.text}>Alarma</Text>
-                        </TouchableOpacity>
+                        <Text>  </Text>
+                        <Button title = 'Alarma' onPress={() => navigation.navigate('Alarm')} />
                     </View>
                 </View>
             }
@@ -72,19 +67,19 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-start',
         width: '100%',
-        backgroundColor: '#0B3954'
+        backgroundColor: '#B6E3E9'
     },
     title: {
         textAlign: 'center',
         fontWeight: 'normal',
         fontSize: 26,
         marginBottom: 20,
-        color: '#ffffff'
+        color: '#292929'
     },
     inputText: {
         borderWidth: 1,
-        borderColor: '#087E8B',
-        backgroundColor: '#087E8B',
+        borderColor: '#FAF1D6',
+        backgroundColor: '#FAF1D6',
         color: '#ffffff',
         width: '100%',
         margin: 10,
@@ -95,7 +90,7 @@ const styles = StyleSheet.create({
         width: '60%',
         borderRadius: 15,
         padding: 5,
-        backgroundColor: '#BFD7EA',
+        backgroundColor: '#FAD4AE',
         marginTop: 20,
     },
     text: {
@@ -105,10 +100,10 @@ const styles = StyleSheet.create({
     },
     containerLocation: {
         flex: 1,
-        flexDirection: 'column',
+        flexDirection: 'row',
         alignItems: 'center',
-        width: '90%',
-        marginTop: 22
+        justifyContent: 'center',
+        width: '80%',
     },
     textLocation: {
         color: '#ffffff'
